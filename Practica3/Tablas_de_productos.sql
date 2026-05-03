@@ -20,3 +20,14 @@ CREATE TABLE inventario(
 	id_almacen INT REFERENCES almacenes(id_almacen) ON DELETE CASCADE,
 	cantidad INT NOT NULL CHECK (cantidad >= 0)
 );
+
+INSERT INTO almacenes (nombre_almacen,direccion_almacen,ciudad_almacen)
+VALUES ('Almacen Central', 'Av.siempre viva 123', 'Ciudad de Mexico');
+
+INSERT INTO(nombre_producto)
+VALUES ('laptop pro'), ("Telefono");
+
+INSERT INTO inventario(id_producto, id_almacen, cantidad)
+VALUES (1,1,60),(2,1,100);
+
+
